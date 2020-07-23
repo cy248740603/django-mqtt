@@ -1,0 +1,1620 @@
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Jul 21 17:22:24 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:16:48
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mysite/
+chdir(): No such file or directory [core/uwsgi.c line 2625]
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Jul 21 17:27:56 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:16:48
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xf25fa0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/usr/local/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 68, in <module>
+    check_sqlite_version()
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 65, in check_sqlite_version
+    raise ImproperlyConfigured('SQLite 3.8.3 or later is required (found %s).' % Database.sqlite_version)
+django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 7160, cores: 1)
+spawned uWSGI worker 2 (pid: 7162, cores: 1)
+spawned uWSGI worker 3 (pid: 7163, cores: 1)
+spawned uWSGI worker 4 (pid: 7164, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 08:35:18 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:16:48
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8997).
+bind(): Address already in use [core/socket.c line 769]
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7164|app: -1|req: -1/1] 218.75.30.86 () {46 vars in 847 bytes} [Wed Jul 22 08:36:00 2020] GET /admin => generated 21 bytes in 5 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7163|app: -1|req: -1/2] 218.75.30.86 () {48 vars in 808 bytes} [Wed Jul 22 08:36:00 2020] GET /favicon.ico => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7164|app: -1|req: -1/3] 218.75.30.86 () {44 vars in 806 bytes} [Wed Jul 22 08:36:32 2020] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7163|app: -1|req: -1/4] 218.75.30.86 () {44 vars in 750 bytes} [Wed Jul 22 08:36:33 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7164|app: -1|req: -1/5] 218.75.30.86 () {44 vars in 806 bytes} [Wed Jul 22 08:44:35 2020] GET / => generated 21 bytes in 32 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7163|app: -1|req: -1/6] 218.75.30.86 () {44 vars in 750 bytes} [Wed Jul 22 08:44:37 2020] GET /favicon.ico => generated 21 bytes in 29 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7164|app: -1|req: -1/7] 218.75.30.86 () {44 vars in 771 bytes} [Wed Jul 22 08:49:48 2020] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7163|app: -1|req: -1/8] 218.75.30.86 () {44 vars in 721 bytes} [Wed Jul 22 08:49:49 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7164|app: -1|req: -1/9] 218.75.30.86 () {46 vars in 833 bytes} [Wed Jul 22 08:49:54 2020] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 7163|app: -1|req: -1/10] 218.75.30.86 () {44 vars in 753 bytes} [Wed Jul 22 08:49:55 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 08:53:56 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:16:48
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xf18060
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/usr/local/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 68, in <module>
+    check_sqlite_version()
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 65, in check_sqlite_version
+    raise ImproperlyConfigured('SQLite 3.8.3 or later is required (found %s).' % Database.sqlite_version)
+django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 19954, cores: 1)
+spawned uWSGI worker 2 (pid: 19956, cores: 1)
+spawned uWSGI worker 3 (pid: 19957, cores: 1)
+spawned uWSGI worker 4 (pid: 19958, cores: 1)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19957|app: -1|req: -1/1] 218.75.30.86 () {46 vars in 840 bytes} [Wed Jul 22 08:54:17 2020] GET / => generated 21 bytes in 5 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19954|app: -1|req: -1/2] 218.75.30.86 () {48 vars in 806 bytes} [Wed Jul 22 08:54:17 2020] GET /favicon.ico => generated 21 bytes in 5 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19957|app: -1|req: -1/3] 218.75.30.86 () {46 vars in 840 bytes} [Wed Jul 22 08:54:18 2020] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19954|app: -1|req: -1/4] 218.75.30.86 () {48 vars in 806 bytes} [Wed Jul 22 08:54:18 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19958|app: -1|req: -1/5] 218.75.30.86 () {46 vars in 840 bytes} [Wed Jul 22 08:54:18 2020] GET / => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19957|app: -1|req: -1/6] 218.75.30.86 () {48 vars in 806 bytes} [Wed Jul 22 08:54:19 2020] GET /favicon.ico => generated 21 bytes in 31 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19958|app: -1|req: -1/7] 218.75.30.86 () {46 vars in 840 bytes} [Wed Jul 22 08:54:19 2020] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19956|app: -1|req: -1/8] 218.75.30.86 () {48 vars in 806 bytes} [Wed Jul 22 08:54:20 2020] GET /favicon.ico => generated 21 bytes in 3 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19954|app: -1|req: -1/9] 218.75.30.86 () {46 vars in 840 bytes} [Wed Jul 22 08:54:22 2020] GET / => generated 21 bytes in 28 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 19957|app: -1|req: -1/10] 218.75.30.86 () {48 vars in 806 bytes} [Wed Jul 22 08:54:22 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 09:10:06 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:16:48
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x14f4050
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/usr/local/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 68, in <module>
+    check_sqlite_version()
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 65, in check_sqlite_version
+    raise ImproperlyConfigured('SQLite 3.8.3 or later is required (found %s).' % Database.sqlite_version)
+django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 20010, cores: 1)
+spawned uWSGI worker 2 (pid: 20012, cores: 1)
+spawned uWSGI worker 3 (pid: 20013, cores: 1)
+spawned uWSGI worker 4 (pid: 20014, cores: 1)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20012|app: -1|req: -1/1] 218.75.30.86 () {46 vars in 852 bytes} [Wed Jul 22 09:10:32 2020] GET /admin => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20014|app: -1|req: -1/2] 218.75.30.86 () {48 vars in 813 bytes} [Wed Jul 22 09:10:32 2020] GET /favicon.ico => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20013|app: -1|req: -1/3] 218.75.30.86 () {44 vars in 811 bytes} [Wed Jul 22 09:10:36 2020] GET / => generated 21 bytes in 5 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20010|app: -1|req: -1/4] 218.75.30.86 () {44 vars in 755 bytes} [Wed Jul 22 09:10:37 2020] GET /favicon.ico => generated 21 bytes in 3 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20012|app: -1|req: -1/5] 80.82.70.187 () {36 vars in 495 bytes} [Wed Jul 22 09:13:19 2020] GET /cache/global/img/gs.gif => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20012|app: -1|req: -1/6] 218.75.30.86 () {46 vars in 842 bytes} [Wed Jul 22 09:13:47 2020] GET / => generated 21 bytes in 28 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20014|app: -1|req: -1/7] 218.75.30.86 () {48 vars in 808 bytes} [Wed Jul 22 09:13:47 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20013|app: -1|req: -1/8] 218.75.30.86 () {46 vars in 842 bytes} [Wed Jul 22 09:13:49 2020] GET / => generated 21 bytes in 2 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20010|app: -1|req: -1/9] 218.75.30.86 () {48 vars in 808 bytes} [Wed Jul 22 09:13:49 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20010|app: -1|req: -1/10] 218.75.30.86 () {46 vars in 842 bytes} [Wed Jul 22 09:13:49 2020] GET / => generated 21 bytes in 27 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20012|app: -1|req: -1/11] 218.75.30.86 () {48 vars in 808 bytes} [Wed Jul 22 09:13:50 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20014|app: -1|req: -1/12] 218.75.30.86 () {46 vars in 842 bytes} [Wed Jul 22 09:13:50 2020] GET / => generated 21 bytes in 31 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20012|app: -1|req: -1/13] 218.75.30.86 () {48 vars in 808 bytes} [Wed Jul 22 09:13:50 2020] GET /favicon.ico => generated 21 bytes in 2 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20012|app: -1|req: -1/14] 218.75.30.86 () {46 vars in 842 bytes} [Wed Jul 22 09:13:51 2020] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20010|app: -1|req: -1/15] 218.75.30.86 () {48 vars in 808 bytes} [Wed Jul 22 09:13:51 2020] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 11:27:33 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:16:48
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8997).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 12:27:51 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:17:38
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /data/env/mqtt/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8997).
+bind(): Address already in use [core/socket.c line 769]
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 20012|app: -1|req: -1/16] 218.75.30.86 () {46 vars in 912 bytes} [Wed Jul 22 12:31:56 2020] GET /admin/ => generated 21 bytes in 2 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 12:34:22 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:17:38
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /data/env/mqtt/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xdce0b0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xdce0b0 pid: 28704 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 28704, cores: 1)
+spawned uWSGI worker 2 (pid: 28706, cores: 1)
+spawned uWSGI worker 3 (pid: 28707, cores: 1)
+spawned uWSGI worker 4 (pid: 28708, cores: 1)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 1/1] 218.75.30.86 () {48 vars in 943 bytes} [Wed Jul 22 12:35:11 2020] GET /admin/ => generated 0 bytes in 55 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28708|app: 0|req: 1/2] 218.75.30.86 () {48 vars in 980 bytes} [Wed Jul 22 12:35:11 2020] GET /admin/login/?next=/admin/ => generated 1822 bytes in 118 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 2/3] 218.75.30.86 () {48 vars in 936 bytes} [Wed Jul 22 12:35:19 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 2/4] 218.75.30.86 () {48 vars in 973 bytes} [Wed Jul 22 12:35:19 2020] GET /admin/login/?next=/admin/ => generated 1822 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 3/5] 218.75.30.86 () {46 vars in 912 bytes} [Wed Jul 22 12:35:20 2020] GET /admin/ => generated 0 bytes in 2 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28707|app: 0|req: 1/6] 218.75.30.86 () {46 vars in 949 bytes} [Wed Jul 22 12:35:20 2020] GET /admin/login/?next=/admin/ => generated 1822 bytes in 122 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 4/7] 218.75.30.86 () {48 vars in 980 bytes} [Wed Jul 22 12:39:23 2020] GET /admin/login/?next=/admin/ => generated 1822 bytes in 73 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 5/8] 218.75.30.86 () {56 vars in 1204 bytes} [Wed Jul 22 12:39:34 2020] POST /admin/login/?next=/admin/ => generated 1954 bytes in 126 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 6/9] 218.75.30.86 () {56 vars in 1204 bytes} [Wed Jul 22 12:41:28 2020] POST /admin/login/?next=/admin/ => generated 1951 bytes in 185 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 7/10] 218.75.30.86 () {56 vars in 1204 bytes} [Wed Jul 22 12:41:39 2020] POST /admin/login/?next=/admin/ => generated 1954 bytes in 120 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 8/11] 218.75.30.86 () {56 vars in 1204 bytes} [Wed Jul 22 12:41:45 2020] POST /admin/login/?next=/admin/ => generated 1954 bytes in 125 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 3/12] 218.75.30.86 () {56 vars in 1204 bytes} [Wed Jul 22 12:41:49 2020] POST /admin/login/?next=/admin/ => generated 1954 bytes in 126 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 9/13] 218.75.30.86 () {56 vars in 1204 bytes} [Wed Jul 22 12:42:53 2020] POST /admin/login/?next=/admin/ => generated 0 bytes in 147 msecs (HTTP/1.1 302) 9 headers in 559 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28708|app: 0|req: 4/14] 218.75.30.86 () {50 vars in 1054 bytes} [Wed Jul 22 12:42:53 2020] GET /admin/ => generated 4576 bytes in 21 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 10/15] 218.75.30.86 () {48 vars in 1042 bytes} [Wed Jul 22 12:42:57 2020] GET /admin/server/device_data/ => generated 9211 bytes in 42 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 5/16] 218.75.30.86 () {46 vars in 881 bytes} [Wed Jul 22 12:42:57 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 11/17] 61.151.206.25 () {40 vars in 615 bytes} [Wed Jul 22 12:43:39 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.0 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 12/18] 218.75.30.86 () {50 vars in 1073 bytes} [Wed Jul 22 12:44:40 2020] GET /admin/server/device_data/ => generated 9211 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 6/19] 218.75.30.86 () {46 vars in 881 bytes} [Wed Jul 22 12:44:40 2020] GET /admin/jsi18n/ => generated 7684 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28707|app: 0|req: 2/20] 218.75.30.86 () {50 vars in 1073 bytes} [Wed Jul 22 12:44:43 2020] GET /admin/server/device_data/ => generated 9211 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 13/21] 218.75.30.86 () {46 vars in 881 bytes} [Wed Jul 22 12:44:43 2020] GET /admin/jsi18n/ => generated 7684 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 14/22] 112.14.114.50 () {44 vars in 1123 bytes} [Wed Jul 22 12:46:48 2020] GET /admin/?nsukey=Fk0DAp0kYIQXZ3%2FAFrJbjiZ%2F5kPqX7eu46zyIrRxrOIJks6v%2FKxkjkOqFSER1URYrRrkiaWCDVbpnmRhPFyP7VlTQbfr9IBd8WKl772YNhwV7t3wFNqscAMeja9QwbhshfShk6EwkCzD3e1DFTLGoA%3D%3D => generated 0 bytes in 2 msecs (HTTP/1.1 302) 7 headers in 449 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 7/23] 112.14.114.50 () {44 vars in 1189 bytes} [Wed Jul 22 12:46:48 2020] GET /admin/login/?next=/admin/%3Fnsukey%3DFk0DAp0kYIQXZ3%252FAFrJbjiZ%252F5kPqX7eu46zyIrRxrOIJks6v%252FKxkjkOqFSER1URYrRrkiaWCDVbpnmRhPFyP7VlTQbfr9IBd8WKl772YNhwV7t3wFNqscAMeja9QwbhshfShk6EwkCzD3e1DFTLGoA%253D%253D => generated 2176 bytes in 7 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 15/24] 112.14.114.50 () {46 vars in 1750 bytes} [Wed Jul 22 12:46:49 2020] GET /admin/login/?next=/admin/%3Fnsukey%3DFk0DAp0kYIQXZ3%252FAFrJbjiZ%252F5kPqX7eu46zyIrRxrOIJks6v%252FKxkjkOqFSER1URYrRrkiaWCDVbpnmRhPFyP7VlTQbfr9IBd8WKl772YNhwV7t3wFNqscAMeja9QwbhshfShk6EwkCzD3e1DFTLGoA%253D%253D&nsukey=1zeDuf3fZoJeHti4Q1LfuNUmzYYVgUXIt9oqnEuTOJHNG9fCJkXJnF8gJNJAoTC9K0vsSGpb8WKRt7tSlhiZ8FAiTTmoFOJ2Iw0pexRhrIE8t5B4a3UqL3sGGu232vpoL9%2F5iM5eqdE%2B0L%2FsBIYK%2FSh20oLL7NpGuJsdETIg8brMT4NlVppMsGHYVJwqZekBL4foWBKQAzbPUxJinHYq1A%3D%3D => generated 2416 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 16/25] 218.75.30.86 () {48 vars in 1302 bytes} [Wed Jul 22 12:52:37 2020] GET /getDeviceData?deviceId=1 => generated 1013 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 17/26] 218.75.30.86 () {52 vars in 1390 bytes} [Wed Jul 22 12:52:45 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 18/27] 112.14.114.50 () {46 vars in 1352 bytes} [Wed Jul 22 12:52:45 2020] GET /admin/?nsukey=qLTOEDPZba8Z6%2F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%2B35lwoB4tws3jK973nfU%2BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%2FToSPvxerQD3flbK8U0XKcrqu%2FmBk3JF0msqIDcDQBr7otABir7Ujr1%2B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%3D%3D => generated 0 bytes in 2 msecs (HTTP/1.1 302) 7 headers in 525 bytes (1 switches on core 0)
+[pid: 28707|app: 0|req: 3/28] 112.14.114.50 () {46 vars in 1430 bytes} [Wed Jul 22 12:52:46 2020] GET /admin/login/?next=/admin/%3Fnsukey%3DqLTOEDPZba8Z6%252F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%252B35lwoB4tws3jK973nfU%252BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%252FToSPvxerQD3flbK8U0XKcrqu%252FmBk3JF0msqIDcDQBr7otABir7Ujr1%252B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%253D%253D => generated 2322 bytes in 7 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 8/29] 112.14.114.50 () {46 vars in 1914 bytes} [Wed Jul 22 12:52:47 2020] GET /admin/login/?next=/admin/%3Fnsukey%3DqLTOEDPZba8Z6%252F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%252B35lwoB4tws3jK973nfU%252BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%252FToSPvxerQD3flbK8U0XKcrqu%252FmBk3JF0msqIDcDQBr7otABir7Ujr1%252B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%253D%253D&nsukey=ugOHG3%2BzfeQp1tMFYwrCfSne%2FVxNhCJNc9lodOtFuDehlRzkzWt1M03mAhqo%2FCk4qDLMVp6kt1WIRsfx%2FlKgUnk2b5Bbe1JQs8ghtT2LZm4d3loS0IRpaWocHDNGPW44pEp%2BbnbnflUMJ2AsyhQAcFiRPZ7ESqX4tmX4pUC%2FmjsNLyhGw3%2FHHvJk95ZdDwOftXkWdW5Lgtew32Py8LUtAw%3D%3D => generated 2568 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 19/30] 112.14.114.50 () {54 vars in 2640 bytes} [Wed Jul 22 12:52:54 2020] POST /admin/login/?next=/admin/%3Fnsukey%3DqLTOEDPZba8Z6%252F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%252B35lwoB4tws3jK973nfU%252BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%252FToSPvxerQD3flbK8U0XKcrqu%252FmBk3JF0msqIDcDQBr7otABir7Ujr1%252B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%253D%253D&nsukey=ugOHG3%2BzfeQp1tMFYwrCfSne%2FVxNhCJNc9lodOtFuDehlRzkzWt1M03mAhqo%2FCk4qDLMVp6kt1WIRsfx%2FlKgUnk2b5Bbe1JQs8ghtT2LZm4d3loS0IRpaWocHDNGPW44pEp%2BbnbnflUMJ2AsyhQAcFiRPZ7ESqX4tmX4pUC%2FmjsNLyhGw3%2FHHvJk95ZdDwOftXkWdW5Lgtew32Py8LUtAw%3D%3D => generated 0 bytes in 148 msecs (HTTP/1.1 302) 9 headers in 799 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 9/31] 112.14.114.50 () {50 vars in 2005 bytes} [Wed Jul 22 12:52:54 2020] GET /admin/?nsukey=qLTOEDPZba8Z6%2F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%2B35lwoB4tws3jK973nfU%2BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%2FToSPvxerQD3flbK8U0XKcrqu%2FmBk3JF0msqIDcDQBr7otABir7Ujr1%2B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%3D%3D => generated 4576 bytes in 15 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 20/32] 112.14.114.50 () {48 vars in 1251 bytes} [Wed Jul 22 12:53:04 2020] GET /admin/server/device_data/add/ => generated 5217 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28708|app: 0|req: 10/33] 112.14.114.50 () {46 vars in 907 bytes} [Wed Jul 22 12:53:04 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 21/34] 218.75.30.86 () {52 vars in 1390 bytes} [Wed Jul 22 12:53:07 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 22/35] 218.75.30.86 () {52 vars in 1390 bytes} [Wed Jul 22 12:53:21 2020] POST /setBiubiu => generated 18 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+Successful send message!
+[pid: 28706|app: 0|req: 23/36] 218.75.30.86 () {52 vars in 1390 bytes} [Wed Jul 22 12:53:23 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 24/37] 218.75.30.86 () {52 vars in 1390 bytes} [Wed Jul 22 12:53:27 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 25/38] 101.91.62.99 () {40 vars in 736 bytes} [Wed Jul 22 12:55:15 2020] GET /admin => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 26/39] 218.75.30.86 () {46 vars in 956 bytes} [Wed Jul 22 12:58:06 2020] GET /admin/ => generated 4576 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 11/40] 218.75.30.86 () {48 vars in 1032 bytes} [Wed Jul 22 12:58:10 2020] GET /admin/server/device/ => generated 5441 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 27/41] 218.75.30.86 () {46 vars in 876 bytes} [Wed Jul 22 12:58:11 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 28/42] 218.75.30.86 () {48 vars in 1054 bytes} [Wed Jul 22 12:58:41 2020] GET /admin/server/device/add/ => generated 7084 bytes in 42 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 12/43] 218.75.30.86 () {46 vars in 880 bytes} [Wed Jul 22 12:58:41 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 29/44] 218.75.30.86 () {56 vars in 1246 bytes} [Wed Jul 22 12:59:02 2020] POST /admin/server/device/add/ => generated 0 bytes in 25 msecs (HTTP/1.1 302) 8 headers in 515 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 13/45] 218.75.30.86 () {50 vars in 1291 bytes} [Wed Jul 22 12:59:02 2020] GET /admin/server/device/ => generated 5929 bytes in 18 msecs (HTTP/1.1 200) 8 headers in 479 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 30/46] 218.75.30.86 () {46 vars in 876 bytes} [Wed Jul 22 12:59:03 2020] GET /admin/jsi18n/ => generated 7684 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 31/47] 61.151.178.165 () {40 vars in 733 bytes} [Wed Jul 22 13:00:24 2020] GET /admin => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 32/48] 218.75.30.86 () {46 vars in 899 bytes} [Wed Jul 22 13:01:17 2020] GET /admin/server/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 7 headers in 272 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 14/49] 218.75.30.86 () {46 vars in 936 bytes} [Wed Jul 22 13:01:17 2020] GET /admin/login/?next=/admin/server/ => generated 1836 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 33/50] 218.75.30.86 () {56 vars in 1225 bytes} [Wed Jul 22 13:01:22 2020] POST /admin/login/?next=/admin/server/ => generated 0 bytes in 143 msecs (HTTP/1.1 302) 9 headers in 566 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 15/51] 218.75.30.86 () {50 vars in 1075 bytes} [Wed Jul 22 13:01:22 2020] GET /admin/server/ => generated 3326 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28707|app: 0|req: 4/52] 218.75.30.86 () {48 vars in 1049 bytes} [Wed Jul 22 13:01:24 2020] GET /admin/server/device_data/ => generated 9211 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 34/53] 218.75.30.86 () {46 vars in 881 bytes} [Wed Jul 22 13:01:25 2020] GET /admin/jsi18n/ => generated 7684 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 35/54] 218.75.30.86 () {48 vars in 1037 bytes} [Wed Jul 22 13:01:29 2020] GET /admin/server/ => generated 3326 bytes in 11 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28708|app: 0|req: 16/55] 218.75.30.86 () {48 vars in 1041 bytes} [Wed Jul 22 13:01:30 2020] GET /admin/server/article/ => generated 5350 bytes in 20 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 36/56] 218.75.30.86 () {46 vars in 877 bytes} [Wed Jul 22 13:01:31 2020] GET /admin/jsi18n/ => generated 7684 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 17/57] 218.75.30.86 () {48 vars in 1033 bytes} [Wed Jul 22 13:01:33 2020] GET /admin/server/ => generated 3326 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 37/58] 218.75.30.86 () {48 vars in 1039 bytes} [Wed Jul 22 13:01:35 2020] GET /admin/server/device/ => generated 5762 bytes in 19 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28707|app: 0|req: 5/59] 218.75.30.86 () {46 vars in 876 bytes} [Wed Jul 22 13:01:35 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 38/60] 218.75.30.86 () {50 vars in 1070 bytes} [Wed Jul 22 13:03:44 2020] GET /admin/server/device/ => generated 5762 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 18/61] 218.75.30.86 () {46 vars in 876 bytes} [Wed Jul 22 13:03:44 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 39/62] 125.108.137.36 () {46 vars in 1270 bytes} [Wed Jul 22 13:04:03 2020] GET /getDeviceData?deviceId= => generated 112 bytes in 3 msecs (HTTP/1.1 200) 7 headers in 231 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 40/63] 101.91.60.109 () {40 vars in 1775 bytes} [Wed Jul 22 13:04:24 2020] GET /admin/login/?next=/admin/%3Fnsukey%3DqLTOEDPZba8Z6%252F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%252B35lwoB4tws3jK973nfU%252BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%252FToSPvxerQD3flbK8U0XKcrqu%252FmBk3JF0msqIDcDQBr7otABir7Ujr1%252B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%253D%253D&nsukey=ugOHG3%2BzfeQp1tMFYwrCfSne%2FVxNhCJNc9lodOtFuDehlRzkzWt1M03mAhqo%2FCk4qDLMVp6kt1WIRsfx%2FlKgUnk2b5Bbe1JQs8ghtT2LZm4d3loS0IRpaWocHDNGPW44pEp%2BbnbnflUMJ2AsyhQAcFiRPZ7ESqX4tmX4pUC%2FmjsNLyhGw3%2FHHvJk95ZdDwOftXkWdW5Lgtew32Py8LUtAw%3D%3D => generated 2568 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 19/64] 61.129.6.203 () {40 vars in 1225 bytes} [Wed Jul 22 13:04:25 2020] GET /admin/login/?next=/admin/%3Fnsukey%3DqLTOEDPZba8Z6%252F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%252B35lwoB4tws3jK973nfU%252BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%252FToSPvxerQD3flbK8U0XKcrqu%252FmBk3JF0msqIDcDQBr7otABir7Ujr1%252B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%253D%253D => generated 2322 bytes in 8 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 41/65] 61.129.6.251 () {40 vars in 1235 bytes} [Wed Jul 22 13:04:36 2020] GET /admin/?nsukey=qLTOEDPZba8Z6%2F1cGNd3m7LGGRwTVsKV8Hlg30QlcG2joZYQ%2B35lwoB4tws3jK973nfU%2BDDkGe69O0ouHHlNWtAuvq5XarFtcZ3Nfg7hsXMwAoySGBhATFNZ%2FToSPvxerQD3flbK8U0XKcrqu%2FmBk3JF0msqIDcDQBr7otABir7Ujr1%2B78Kwy6pIAxUKotikIo7F1hC3Kc9H6YVtkE8pmA%3D%3D => generated 0 bytes in 1 msecs (HTTP/1.1 302) 7 headers in 525 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 42/66] 125.108.137.36 () {46 vars in 1280 bytes} [Wed Jul 22 13:05:01 2020] GET /getDeviceData?deviceId= => generated 112 bytes in 3 msecs (HTTP/1.1 200) 7 headers in 231 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 43/67] 125.108.137.36 () {50 vars in 1370 bytes} [Wed Jul 22 13:05:03 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 44/68] 223.104.246.240 () {44 vars in 1285 bytes} [Wed Jul 22 13:05:23 2020] GET /admin/?nsukey=ir%2BJJyVvabgIHfA5d2WhFdPan9k%2BX%2BFsyZ0QxMecuHe%2F4PHlntd5WvXsN6MfFyc0ZVTFPVgSKWol0Vj2HGCgMSVNCOLeZ9%2BeQsRiRnY93Pf4pNdU2SQ8YMk4uv6mKr2RgEptwAbmpjhfSxW7yQmvKzIEXm%2FSLw%2F0D%2BGBKstDzz33kuMFKbNSYf8KXMu%2BO%2BJ39oiQDJHVQF9h%2BcUSS63ogQ%3D%3D => generated 0 bytes in 1 msecs (HTTP/1.1 302) 7 headers in 545 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 20/69] 223.104.246.240 () {44 vars in 1383 bytes} [Wed Jul 22 13:05:23 2020] GET /admin/login/?next=/admin/%3Fnsukey%3Dir%252BJJyVvabgIHfA5d2WhFdPan9k%252BX%252BFsyZ0QxMecuHe%252F4PHlntd5WvXsN6MfFyc0ZVTFPVgSKWol0Vj2HGCgMSVNCOLeZ9%252BeQsRiRnY93Pf4pNdU2SQ8YMk4uv6mKr2RgEptwAbmpjhfSxW7yQmvKzIEXm%252FSLw%252F0D%252BGBKstDzz33kuMFKbNSYf8KXMu%252BO%252BJ39oiQDJHVQF9h%252BcUSS63ogQ%253D%253D => generated 2352 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 45/70] 223.104.246.240 () {46 vars in 1964 bytes} [Wed Jul 22 13:05:24 2020] GET /admin/login/?next=/admin/%3Fnsukey%3Dir%252BJJyVvabgIHfA5d2WhFdPan9k%252BX%252BFsyZ0QxMecuHe%252F4PHlntd5WvXsN6MfFyc0ZVTFPVgSKWol0Vj2HGCgMSVNCOLeZ9%252BeQsRiRnY93Pf4pNdU2SQ8YMk4uv6mKr2RgEptwAbmpjhfSxW7yQmvKzIEXm%252FSLw%252F0D%252BGBKstDzz33kuMFKbNSYf8KXMu%252BO%252BJ39oiQDJHVQF9h%252BcUSS63ogQ%253D%253D&nsukey=V4x2vn9NE6iqzA3nLpB7Eltx1yPcWNWIq7%2F%2BhZPzQV57OmQlUGnl0EGqrh7ovKoZlX9gIfhJOwhIg2CD2Iy0lkb5OqG4k0UMFf3JbZK68Q7JkxSZEH%2FjTVPjNlKcLsxbpcwwacO0op6Y%2FKG51KBn1rPoH8%2FnovC9r%2FPVREsy0grfapSjXk%2F1X6Y3xAfE%2ByjwDhjiZB60OISEWFg92pJO%2BA%3D%3D => generated 2602 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 46/71] 223.104.246.240 () {46 vars in 1097 bytes} [Wed Jul 22 13:05:31 2020] GET /getDeviceData?deviceId= => generated 112 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 231 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28708|app: 0|req: 21/72] 223.104.246.240 () {50 vars in 1187 bytes} [Wed Jul 22 13:05:32 2020] POST /setBiubiu => generated 18 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 47/73] 125.108.137.36 () {46 vars in 1269 bytes} [Wed Jul 22 13:06:01 2020] GET /getDeviceData?deviceId=1 => generated 1013 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 48/74] 125.108.137.36 () {50 vars in 1357 bytes} [Wed Jul 22 13:06:06 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+Successful send message!
+[pid: 28708|app: 0|req: 22/75] 125.108.137.36 () {50 vars in 1357 bytes} [Wed Jul 22 13:06:07 2020] POST /setBiubiu => generated 18 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 49/76] 218.75.30.86 () {48 vars in 1070 bytes} [Wed Jul 22 13:07:07 2020] GET /admin/server/device/test/change/ => generated 7361 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 23/77] 218.75.30.86 () {46 vars in 888 bytes} [Wed Jul 22 13:07:07 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 50/78] 218.75.30.86 () {48 vars in 1039 bytes} [Wed Jul 22 13:07:11 2020] GET /admin/server/device/ => generated 5762 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 24/79] 218.75.30.86 () {48 vars in 1074 bytes} [Wed Jul 22 13:07:13 2020] GET /admin/server/device/154266/change/ => generated 8396 bytes in 40 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 51/80] 218.75.30.86 () {46 vars in 890 bytes} [Wed Jul 22 13:07:13 2020] GET /admin/jsi18n/ => generated 7684 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 52/81] 218.75.30.86 () {48 vars in 1039 bytes} [Wed Jul 22 13:07:17 2020] GET /admin/server/device/ => generated 5762 bytes in 20 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 25/82] 218.75.30.86 () {48 vars in 1066 bytes} [Wed Jul 22 13:07:19 2020] GET /admin/server/device/12/change/ => generated 8375 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 53/83] 218.75.30.86 () {46 vars in 886 bytes} [Wed Jul 22 13:07:19 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 54/84] 218.75.30.86 () {48 vars in 1039 bytes} [Wed Jul 22 13:07:22 2020] GET /admin/server/device/ => generated 5762 bytes in 24 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28708|app: 0|req: 26/85] 218.75.30.86 () {48 vars in 1064 bytes} [Wed Jul 22 13:07:23 2020] GET /admin/server/device/1/change/ => generated 18599 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 396 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 55/86] 218.75.30.86 () {46 vars in 885 bytes} [Wed Jul 22 13:07:23 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 56/87] 125.108.137.36 () {46 vars in 1276 bytes} [Wed Jul 22 13:08:48 2020] GET /getDeviceData?deviceId= => generated 112 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 231 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 57/88] 218.75.30.86 () {48 vars in 1302 bytes} [Wed Jul 22 13:13:36 2020] GET /getDeviceData?deviceId=1 => generated 1013 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 58/89] 223.104.247.63 () {52 vars in 1393 bytes} [Wed Jul 22 13:13:50 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 59/90] 218.75.30.86 () {48 vars in 1314 bytes} [Wed Jul 22 13:14:18 2020] GET /getDeviceData?deviceId=1 => generated 1013 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 60/91] 61.129.6.151 () {40 vars in 1330 bytes} [Wed Jul 22 13:17:03 2020] GET /admin/login/?next=/admin/%3Fnsukey%3Dir%252BJJyVvabgIHfA5d2WhFdPan9k%252BX%252BFsyZ0QxMecuHe%252F4PHlntd5WvXsN6MfFyc0ZVTFPVgSKWol0Vj2HGCgMSVNCOLeZ9%252BeQsRiRnY93Pf4pNdU2SQ8YMk4uv6mKr2RgEptwAbmpjhfSxW7yQmvKzIEXm%252FSLw%252F0D%252BGBKstDzz33kuMFKbNSYf8KXMu%252BO%252BJ39oiQDJHVQF9h%252BcUSS63ogQ%253D%253D => generated 2352 bytes in 7 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 61/92] 101.89.19.149 () {40 vars in 1846 bytes} [Wed Jul 22 13:18:00 2020] GET /admin/login/?next=/admin/%3Fnsukey%3Dir%252BJJyVvabgIHfA5d2WhFdPan9k%252BX%252BFsyZ0QxMecuHe%252F4PHlntd5WvXsN6MfFyc0ZVTFPVgSKWol0Vj2HGCgMSVNCOLeZ9%252BeQsRiRnY93Pf4pNdU2SQ8YMk4uv6mKr2RgEptwAbmpjhfSxW7yQmvKzIEXm%252FSLw%252F0D%252BGBKstDzz33kuMFKbNSYf8KXMu%252BO%252BJ39oiQDJHVQF9h%252BcUSS63ogQ%253D%253D&nsukey=V4x2vn9NE6iqzA3nLpB7Eltx1yPcWNWIq7%2F%2BhZPzQV57OmQlUGnl0EGqrh7ovKoZlX9gIfhJOwhIg2CD2Iy0lkb5OqG4k0UMFf3JbZK68Q7JkxSZEH%2FjTVPjNlKcLsxbpcwwacO0op6Y%2FKG51KBn1rPoH8%2FnovC9r%2FPVREsy0grfapSjXk%2F1X6Y3xAfE%2ByjwDhjiZB60OISEWFg92pJO%2BA%3D%3D => generated 2602 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 62/93] 218.75.30.86 () {48 vars in 1304 bytes} [Wed Jul 22 13:21:08 2020] GET /getDeviceData?deviceId=1 => generated 1013 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28708|app: 0|req: 27/94] 218.75.30.86 () {52 vars in 1392 bytes} [Wed Jul 22 13:21:09 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 63/95] 218.75.30.86 () {52 vars in 1392 bytes} [Wed Jul 22 13:21:40 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 64/96] 218.75.30.86 () {50 vars in 1095 bytes} [Wed Jul 22 13:21:54 2020] GET /admin/server/device/1/change/ => generated 18599 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 396 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 28/97] 218.75.30.86 () {46 vars in 885 bytes} [Wed Jul 22 13:21:54 2020] GET /admin/jsi18n/ => generated 7684 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 65/98] 218.75.30.86 () {48 vars in 980 bytes} [Wed Jul 22 13:22:48 2020] GET /admin/ => generated 4896 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 29/99] 218.75.30.86 () {46 vars in 966 bytes} [Wed Jul 22 13:22:49 2020] GET /admin%E3%80%81 => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 66/100] 218.75.30.86 () {46 vars in 956 bytes} [Wed Jul 22 13:22:54 2020] GET /admin/ => generated 4896 bytes in 13 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 30/101] 218.75.30.86 () {48 vars in 1032 bytes} [Wed Jul 22 13:22:56 2020] GET /admin/server/device/ => generated 5762 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28706|app: 0|req: 67/102] 218.75.30.86 () {46 vars in 876 bytes} [Wed Jul 22 13:22:56 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+Successful send message!
+[pid: 28706|app: 0|req: 68/103] 218.75.30.86 () {52 vars in 1392 bytes} [Wed Jul 22 13:24:12 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 28706|app: 0|req: 69/104] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:36:28 2020] GET /admin/server/device/ => generated 5762 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 28708|app: 0|req: 31/105] 218.75.30.86 () {46 vars in 876 bytes} [Wed Jul 22 13:36:28 2020] GET /admin/jsi18n/ => generated 7684 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 13:38:25 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 22 July 2020 04:22:03
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x103efc0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/usr/local/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 68, in <module>
+    check_sqlite_version()
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 65, in check_sqlite_version
+    raise ImproperlyConfigured('SQLite 3.8.3 or later is required (found %s).' % Database.sqlite_version)
+django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 28866, cores: 1)
+spawned uWSGI worker 2 (pid: 28868, cores: 1)
+spawned uWSGI worker 3 (pid: 28869, cores: 1)
+spawned uWSGI worker 4 (pid: 28870, cores: 1)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28868|app: -1|req: -1/1] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:37 2020] GET /admin/server/device/ => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28870|app: -1|req: -1/2] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:38 2020] GET /admin/server/device/ => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28869|app: -1|req: -1/3] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:39 2020] GET /admin/server/device/ => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28866|app: -1|req: -1/4] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:40 2020] GET /admin/server/device/ => generated 21 bytes in 3 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28868|app: -1|req: -1/5] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:42 2020] GET /admin/server/device/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28870|app: -1|req: -1/6] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:43 2020] GET /admin/server/device/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28866|app: -1|req: -1/7] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:45 2020] GET /admin/server/device/ => generated 21 bytes in 2 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28868|app: -1|req: -1/8] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:46 2020] GET /admin/server/device/ => generated 21 bytes in 31 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28870|app: -1|req: -1/9] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:48 2020] GET /admin/server/device/ => generated 21 bytes in 32 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28868|app: -1|req: -1/10] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:56 2020] GET /admin/server/device/ => generated 21 bytes in 2 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28870|app: -1|req: -1/11] 218.75.30.86 () {50 vars in 1063 bytes} [Wed Jul 22 13:38:57 2020] GET /admin/server/device/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28868|app: -1|req: -1/12] 218.75.30.86 () {46 vars in 956 bytes} [Wed Jul 22 13:39:02 2020] GET /admin/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28868|app: -1|req: -1/13] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:39:39 2020] GET /admin/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28870|app: -1|req: -1/14] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:39:40 2020] GET /admin/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28869|app: -1|req: -1/15] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:39:41 2020] GET /admin/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28866|app: -1|req: -1/16] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:39:42 2020] GET /admin/ => generated 21 bytes in 29 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 13:40:04 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 22 July 2020 04:22:03
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xb2afc0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/usr/local/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 68, in <module>
+    check_sqlite_version()
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 65, in check_sqlite_version
+    raise ImproperlyConfigured('SQLite 3.8.3 or later is required (found %s).' % Database.sqlite_version)
+django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 28889, cores: 1)
+spawned uWSGI worker 2 (pid: 28891, cores: 1)
+spawned uWSGI worker 3 (pid: 28892, cores: 1)
+spawned uWSGI worker 4 (pid: 28893, cores: 1)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28891|app: -1|req: -1/1] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:46 2020] GET /admin/ => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28893|app: -1|req: -1/2] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:48 2020] GET /admin/ => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28892|app: -1|req: -1/3] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:49 2020] GET /admin/ => generated 21 bytes in 6 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28889|app: -1|req: -1/4] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:49 2020] GET /admin/ => generated 21 bytes in 3 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28891|app: -1|req: -1/5] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:50 2020] GET /admin/ => generated 21 bytes in 2 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28893|app: -1|req: -1/6] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:51 2020] GET /admin/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28889|app: -1|req: -1/7] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:52 2020] GET /admin/ => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "./mqtt/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 28893|app: -1|req: -1/8] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:40:52 2020] GET /admin/ => generated 21 bytes in 31 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 13:42:58 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:17:38
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /data/env/mqtt/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1e8e0a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1e8e0a0 pid: 28911 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 28911, cores: 1)
+spawned uWSGI worker 2 (pid: 28913, cores: 1)
+spawned uWSGI worker 3 (pid: 28914, cores: 1)
+spawned uWSGI worker 4 (pid: 28915, cores: 1)
+connected to mqtt with resurt code  0
+[pid: 28913|app: 0|req: 1/1] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:43:09 2020] GET /admin/ => generated 4896 bytes in 137 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+mqtt server!
+DeviceToServer/1
+[pid: 28913|app: 0|req: 2/2] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 13:54:08 2020] GET /admin/ => generated 4896 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 14:01:57 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:17:38
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /data/env/mqtt/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x25930a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x25930a0 pid: 28970 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 28970, cores: 1)
+spawned uWSGI worker 2 (pid: 28972, cores: 1)
+spawned uWSGI worker 3 (pid: 28973, cores: 1)
+spawned uWSGI worker 4 (pid: 28974, cores: 1)
+connected to mqtt with resurt code  0
+[pid: 28972|app: 0|req: 1/1] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 14:03:03 2020] GET /admin/ => generated 4896 bytes in 135 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28974|app: 0|req: 1/2] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 14:03:06 2020] GET /admin/ => generated 4896 bytes in 133 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28972|app: 0|req: 2/3] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 14:03:06 2020] GET /admin/ => generated 4896 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28972|app: 0|req: 3/4] 218.75.30.86 () {46 vars in 944 bytes} [Wed Jul 22 14:03:11 2020] GET / => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 28972|app: 0|req: 4/5] 218.75.30.86 () {46 vars in 956 bytes} [Wed Jul 22 14:03:15 2020] GET /admin/ => generated 4896 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+[pid: 28972|app: 0|req: 5/6] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 14:03:33 2020] GET /admin/ => generated 4896 bytes in 14 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28972|app: 0|req: 6/7] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 14:06:16 2020] GET /admin/ => generated 4896 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 28972|app: 0|req: 7/8] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 14:06:22 2020] GET /admin/ => generated 4896 bytes in 14 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 14:19:22 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:17:38
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /data/env/mqtt/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8997).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 14:19:40 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:17:38
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /data/env/mqtt/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x128a0a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x128a0a0 pid: 29010 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 29010, cores: 1)
+spawned uWSGI worker 2 (pid: 29012, cores: 1)
+spawned uWSGI worker 3 (pid: 29013, cores: 1)
+spawned uWSGI worker 4 (pid: 29014, cores: 1)
+connected to mqtt with resurt code  0
+[pid: 29012|app: 0|req: 1/1] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 14:20:48 2020] GET /admin/ => generated 4896 bytes in 136 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jul 22 15:07:35 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 21 July 2020 08:17:38
+os: Linux-3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020
+nodename: iZm5e2p5t6gvvf4x6qphy3Z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /data/wwwroot/mqtt
+detected binary path: /data/env/mqtt/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/wwwroot/mqtt/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 3882
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8997 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Apr  2 2020, 13:34:55)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Python main interpreter initialized at 0x13fd140
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x13fd140 pid: 29079 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 29079, cores: 1)
+spawned uWSGI worker 2 (pid: 29081, cores: 1)
+spawned uWSGI worker 3 (pid: 29082, cores: 1)
+spawned uWSGI worker 4 (pid: 29083, cores: 1)
+connected to mqtt with resurt code  0
+[pid: 29081|app: 0|req: 1/1] 218.75.30.86 () {48 vars in 987 bytes} [Wed Jul 22 15:08:21 2020] GET /admin/ => generated 4896 bytes in 131 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+connected to mqtt with resurt code  0
+connected to mqtt with resurt code  0
+[pid: 29081|app: 0|req: 2/2] 101.251.242.238 () {42 vars in 661 bytes} [Wed Jul 22 15:11:41 2020] GET / => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+Successful send message!
+[pid: 29081|app: 0|req: 3/3] 218.75.30.86 () {52 vars in 1392 bytes} [Wed Jul 22 15:28:13 2020] POST /setBiubiu => generated 18 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 283 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 4/4] 80.82.70.187 () {36 vars in 495 bytes} [Wed Jul 22 18:56:04 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 5/5] 47.95.28.143 () {30 vars in 342 bytes} [Wed Jul 22 21:55:21 2020] GET / => generated 26 bytes in 19 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 6/6] 165.227.84.52 () {30 vars in 343 bytes} [Thu Jul 23 04:24:49 2020] GET / => generated 26 bytes in 10 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 7/7] 80.82.70.187 () {36 vars in 495 bytes} [Thu Jul 23 04:38:50 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 8/8] 60.208.116.115 () {32 vars in 370 bytes} [Thu Jul 23 11:44:23 2020] GET / => generated 77 bytes in 1 msecs (HTTP/1.0 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 9/9] 60.208.116.115 () {42 vars in 763 bytes} [Thu Jul 23 11:44:31 2020] GET / => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 10/10] 60.208.116.116 () {30 vars in 344 bytes} [Thu Jul 23 11:44:33 2020] GET / => generated 26 bytes in 10 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 29081|app: 0|req: 11/11] 80.82.70.187 () {36 vars in 495 bytes} [Thu Jul 23 14:21:33 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
